@@ -40,19 +40,7 @@
 + Win10(2004) / Ubuntu20.04 (所有非可视化部分都可以在两个平台完全兼容，以Windows平台为主)
 # 3.项目设计思路与特点
 &ensp;&ensp;&ensp;&ensp;基于tf.nn和tf.keras.Model自定义网络层，模型层，训练部分等等。
-
-对比|tf.Module|tf.keras.Model
---|:--:|--:
-trainable_variables|&heartsuit;|&heartsuit;
-variables|&heartsuit;|&heartsuit;
-tf.saved_model.save(this_model,path)|&heartsuit;|&heartsuit;
-tf.saved_model.load(path)|can not be called|&heartsuit;
-model.save(path)|未定义|&heartsuit;
-model.load(path)|未定义|&heartsuit;
-model.save_weights(path)|未定义|&heartsuit;
-model.save_weights(path)|未定义|&heartsuit;
-
-# 3.文件结构
+# 4.文件结构
 模型训练结果与中间值保存在外部指定位置，不会被云同步。
 数据集保存在外部指定位置，不会被云同步
 
