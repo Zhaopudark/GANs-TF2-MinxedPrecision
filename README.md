@@ -1,6 +1,6 @@
 
 # 0.前言
-鉴于目前tensorflow2.0已经高度依赖keras，不继承keras特性的模型，层，优化器等等都或多或少存在模型部署与保存的问题(bugs)，或者是模型终结结果的输出问题，因此，TF2下原本有依赖keras和不依赖keras两种开发模式，如今退化为仅依赖keras(tf.keras)的开发模式。
+鉴于目前tensorflow2.0已经高度依赖keras，不继承keras特性的模型，层，优化器等等都或多或少存在模型部署与保存的问题(bugs)，或者是模型结果的输出问题，因此，TF2下原本有依赖keras和不依赖keras两种开发模式，如今退化为仅依赖keras(tf.keras)的开发模式。
 
 另外，基于tf.keras也有两种开发模式
 
