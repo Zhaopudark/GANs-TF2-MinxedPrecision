@@ -1,6 +1,6 @@
 
 # 0.前言
-鉴于目前tensorflow2.0已经高度依赖keras，不继承keras特性的模型，层，优化器等等都或多或少存在模型部署与保存的问题(bugs)，或者是模型结果的输出问题，因此，TF2下原本有依赖keras和不依赖keras两种开发模式，如今退化为仅依赖keras(tf.keras)的开发模式。
+鉴于目前tensorflow2.0已经高度依赖keras，不继承keras特性的模型，层，优化器等等都或多或少存在模型部署与保存的问题，因此，TF2下原本有依赖keras和不依赖keras两种开发模式，如今退化为仅依赖keras(tf.keras)的开发模式。
 
 另外，基于tf.keras也有两种开发模式
 
@@ -39,9 +39,7 @@
 + Cuda10.2
 + Win10(2004) / Ubuntu20.04 (所有非可视化部分都可以在两个平台完全兼容，以Windows平台为主)
 # 3.项目设计思路与特点
-&ensp;&ensp;&ensp;&ensp;为了便于二次开发，追求真正的易用性和易理解性，选择了tensorflow2.x的自定义训练模式进行算法构建。需要自定义网络层，模型层，训练部分等等。所以keras提供的强大接口愈加鸡肋。限制了自定义模型中的众多参数名称的自定义，且大部分功能用不到。
-
-&emsp;&emsp;简单继承tf.Module,对模型保存，检查点等依旧支持不够友好，后续开发将基于tf.keras.Model进行。但是tf.keras.Model本身支持功能繁杂，为了不被干扰，需要将我自定义的特有变量加以新的标签
+&ensp;&ensp;&ensp;&ensp;基于tf.nn和tf.keras.Model自定义网络层，模型层，训练部分等等。
 
 对比|tf.Module|tf.keras.Model
 --|:--:|--:
